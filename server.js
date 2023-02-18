@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 
-app.get("/",function(request,response){
+app.get("/",function(req,res){
     // console.log(request)
     response.send('<h1>Hello World!</h1>')
 })
