@@ -11,6 +11,9 @@ app.get("/",function(req,res){
 app.get('/contact',function(req,res){
     res.send('<h1>Hi Im Contact page</h1>')
 })
+app.get('/hobies',function(req,res){
+    res.send('<h1>Hi Im Contact page</h1>')
+})
 app.listen(3000,function(){
     console.log('Hello from lissten server port: 3000')
 })
