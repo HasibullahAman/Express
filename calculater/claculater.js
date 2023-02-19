@@ -22,3 +22,35 @@
 // app.listen(3000,function(){
 //     console.log('Express server listening on port:3000')
 // })
+
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.urlencoded({
+    extended:true
+}));
+
+
+app.get('/',function(req,res){
+    res.sendFile(__dirname,'/bmiCalculator.html')
+})
+
+app.post('/',function(req,res){
+
+    var height = Number(req.body.height);
+    var width = Number(req.body.width);
+
+
+    var result = height*width;
+
+
+    res.send('The result are calulated by bmiCalulator server and is: ' + result);
+
+    
+})
+
+
+app.listen(3000,function(){
+    console.log('Express servers Listening on port 3000: ')
+})
