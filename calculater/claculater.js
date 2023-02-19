@@ -39,10 +39,10 @@ app.get('/',function(req,res){
 app.post('/',function(req,res){
 
     var height = Number(req.body.height);
-    var width = Number(req.body.width);
+    var width = Number(req.body.wight);
 
 
-    var result = height + width;
+    var result = height * width;
 
 
     res.send('The result are calulated by bmiCalulator server and is: ' + result);
